@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background: hsl(0, 0%, 98%);
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 200;
+}
+
+h1 strong {
+    font-weight: 600;
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+    font-size: 15px;
+}
+
+h2 {
+    color: hsl(234, 12%, 34%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about {
+    margin: 4rem 1.5rem;
+    text-align: center;
+    max-width: 480px;
+}
+
+.about p {
+    margin-top: 1.5rem;
+    font-weight: 400;
+}
+
+.features {
+    display: grid;
+    grid-template: 1fr;
+    grid-template-areas: "superv" "builder" "calc" "karma"
+}
+
+@media screen and (min-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .features {
+        grid-template-areas: ".builder." "superv builder calc" "superv karma calc" ".karma.";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+.card {
+    max-width: 350px;
+    background: white;
+    box-shadow: lightgray 0px 8px 20px 0px;
+    border-radius: 0.5rem;
+    border-top: 0.25rem solid;
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
+
+.superv {
+    grid-area: superv;
+    border-color: hsl(180, 62%, 55%);
+}
+
+.builder {
+    grid-area: builder;
+    border-color: hsl(0, 78%, 62%);
+}
+
+.karma {
+    grid-area: karma;
+    border-color: hsl(34, 97%, 64%);
+}
+
+.calc {
+    grid-area: calc;
+    border-color: hsl(212, 86%, 64%);
+}
+
+.card h2 {
+    font-weight: 600;
+}
+
+.card p {
+    margin-top: 1rem;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.card img {
+    margin-top: 2rem;
+    float: right;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+.attribution { 
+    margin: 0 auto;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
